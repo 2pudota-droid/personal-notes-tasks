@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Publish personal notes and manage task reminders.">
+  <title>My Notes and Tasks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">Personal workspace</p>
+      <h1>My Notes and Tasks</h1>
+      <p>Publish a note and schedule reminders for Tasks A-E.</p>
+    </header>
+
+    <section class="card">
+      <h2>Publish a note</h2>
+      <form id="note-form">
+        <label for="note-title">Title</label>
+        <input id="note-title" type="text" placeholder="Weekly plan" required>
+        <label for="note-content">Note</label>
+        <textarea id="note-content" rows="6" placeholder="Write your personal note..." required></textarea>
+        <button type="submit">Publish note</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="section-heading">
+        <div>
+          <h2>Tasks A-E</h2>
+          <p>Choose a reminder date and time for each task.</p>
+        </div>
+        <button id="notification-button" class="secondary" type="button">Enable notifications</button>
+      </div>
+      <form id="task-form">
+        <div id="task-inputs"></div>
+        <button type="submit">Save task reminders</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Published notes</h2>
+      <div id="published-notes" class="empty-state">No notes published yet.</div>
+    </section>
+
+    <section class="card">
+      <h2>Task list</h2>
+      <div id="task-list" class="empty-state">No task reminders saved yet.</div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
